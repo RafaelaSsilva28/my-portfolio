@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+@import 'tailwindcss';
+@theme { --color-cream: #fffaf6; --color-wine: #511a32; --color-ink: #382c31; --color-rose: #e8b6c4; --color-mutedRose: #a76179; --font-display: 'Playfair Display', Georgia, serif; --font-sans: 'DM Sans', Arial, sans-serif; }
+@layer base { html {scroll-behavior:smooth} body {font-family:var(--font-sans)} button, a { -webkit-tap-highlight-color: transparent } :focus-visible {outline:3px solid #a76179;outline-offset:3px} }
+@layer components {
+ .container-main { @apply max-w-[1200px] mx-auto px-6 md:px-10; }
+ .section { @apply py-20 md:py-28; }
+ .eyebrow { @apply flex items-center gap-3 uppercase tracking-[.24em] font-bold text-[11px] text-mutedRose; }
+ .heading { @apply font-display font-bold text-wine text-[clamp(2.8rem,5vw,4.5rem)] leading-[1.12] tracking-[-.052em]; }
+ .subheading { @apply font-display text-2xl md:text-3xl font-bold text-wine; }
+ .paragraph { @apply text-[#72656a] text-base leading-8; }
+ .btn { @apply inline-flex items-center justify-center gap-3 rounded-full px-6 py-3.5 font-semibold text-sm transition-all duration-300; }
+ .btn-primary { @apply bg-wine text-white hover:bg-[#74314e] hover:-translate-y-0.5 shadow-[0_8px_22px_#511a3222]; }
+ .btn-outline { @apply border border-wine/25 text-wine bg-white/50 hover:bg-rose/25 hover:-translate-y-0.5; }
+ .card { @apply rounded-[1.5rem] border border-wine/10 bg-white shadow-[0_14px_38px_#511a320a] transition-shadow duration-300 hover:shadow-[0_18px_48px_#511a3218]; }
+ .chip { @apply rounded-full bg-[#f8eef0] border border-wine/8 text-wine px-3 py-1.5 text-xs font-semibold; }
+ .project-art { @apply h-[270px] relative overflow-hidden flex items-center justify-center; }
+ .decor-circle { @apply absolute h-[75%] aspect-square rounded-full border-[35px] border-white/20 rotate-12; }
+ .tiny-label { @apply text-[11px] uppercase tracking-[.2em] font-bold text-mutedRose mb-3; }
+ .contact-link { @apply flex items-center gap-3 text-wine font-medium hover:text-mutedRose transition-colors; }
+}
+@keyframes rise { from {transform:translateY(24px);opacity:0} to {transform:translateY(0);opacity:1} }
+@keyframes float {0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.animate-rise {animation:rise .8s ease-out both}
+.animate-float {animation:rise .8s ease-out both,float 5s ease-in-out .8s infinite}
+@media (prefers-reduced-motion:reduce) { *,*:before,*:after {animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important} }
+
+/* Aprimoramentos visuais: animações suaves e cards interativos */
+.tech-marquee { width:100%; overflow:hidden; mask-image:linear-gradient(to right, transparent, black 7%, black 93%, transparent); }
+.tech-track { display:flex; align-items:center; gap:14px; width:max-content; animation: marquee 42s linear infinite; }
+.tech-marquee:hover .tech-track { animation-play-state:paused; }
+.tech-pill { display:inline-flex; align-items:center; gap:10px; padding:11px 19px; border-radius:999px; border:1px solid #511a3222; background:#fffaf6; color:#511a32; font-size:12px; font-weight:700; white-space:nowrap; }
+@keyframes marquee { to { transform:translateX(-50%); } }
+.project-card { transition:transform .4s ease,box-shadow .4s ease; }
+.project-card:hover { transform:translateY(-7px); box-shadow:0 25px 55px #511a3220; }
+.project-art-glow { position:absolute; width:15rem; height:15rem; border-radius:50%; background:#fff9; filter:blur(70px); top:-6rem; right:-2rem; }
+.project-icon-glass { display:flex; flex-direction:column; align-items:center; justify-content:center; min-width:190px; min-height:190px; padding:25px; border:1px solid #ffffff80; background:#ffffff59; backdrop-filter:blur(12px); border-radius:28px; transform:rotate(-4deg); box-shadow:0 16px 35px #511a321b; transition:transform .45s ease; }
+.project-card:hover .project-icon-glass { transform:rotate(0deg) scale(1.05); }
+.animate-sparkle { animation:sparkle 3.5s ease-in-out infinite; }
+@keyframes sparkle { 0%,100% {transform:rotate(-9deg) scale(1)} 50% {transform:rotate(9deg) scale(1.1)} }
+@media (prefers-reduced-motion:reduce) { .tech-track,.animate-sparkle {animation:none!important} .project-card:hover {transform:none} }
+
+/* Componentes interativos: paginação, certificados e formulário */
+.page-btn {display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:42px;border-radius:14px;border:1px solid #511a3230;color:#511a32;background:#fff;cursor:pointer;font-weight:700;transition:all .25s ease}
+.page-btn:hover:not(:disabled) {background:#f3dbe3;transform:translateY(-2px)}
+.page-btn:disabled {opacity:.35;cursor:not-allowed}
+.page-active {background:#511a32;color:white;border-color:#511a32}
+.stagger-in {animation:rise .65s both}
+.form-label {display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:700;color:#511a32}
+.form-field {width:100%;border:1px solid #511a3226;border-radius:15px;padding:13px 15px;background:#fffaf6;font:inherit;font-weight:400;outline:none;transition:border .2s,box-shadow .2s}
+.form-field:focus {border-color:#a76179;box-shadow:0 0 0 3px #e8b6c455}
+@media (prefers-reduced-motion:reduce) {.stagger-in {animation:none}}
