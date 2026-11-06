@@ -8,8 +8,8 @@ export const perfil = {
   telefone: '18997316122',
   github: 'https://github.com/RafaelaSsilva28', // Cole a URL do SEU perfil no GitHub.
   linkedin: '', // Opcional.
-  foto: 'public/eu.jpg', // Exemplo: '/foto-rafaela.jpg' (coloque na pasta public).
-  curriculo: 'public/Curriculo_Rafaela.pdf', // Exemplo: '/curriculo.pdf' (coloque na pasta public).
+  foto: '/eu.jpg', // Exemplo: '/foto-rafaela.jpg' (coloque na pasta public).
+  curriculo: '/Curriculo_Rafaela.pdf', // Exemplo: '/curriculo.pdf' (coloque na pasta public).
 }
 
 export const tecnologias = [
