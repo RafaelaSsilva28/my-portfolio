@@ -6,10 +6,10 @@ export const perfil = {
   cidade: 'Andradina, São Paulo',
   email: 'rafaelasouzasilva3009@gmail.com',
   telefone: '18997316122',
-  github: '', // Cole a URL do SEU perfil no GitHub.
+  github: 'https://github.com/RafaelaSsilva28', // Cole a URL do SEU perfil no GitHub.
   linkedin: '', // Opcional.
-  foto: '', // Exemplo: '/foto-rafaela.jpg' (coloque na pasta public).
-  curriculo: '', // Exemplo: '/curriculo.pdf' (coloque na pasta public).
+  foto: 'public/eu.jpg', // Exemplo: '/foto-rafaela.jpg' (coloque na pasta public).
+  curriculo: 'public/Curriculo_Rafaela.pdf', // Exemplo: '/curriculo.pdf' (coloque na pasta public).
 }
 
 export const tecnologias = [
@@ -25,9 +25,9 @@ export const projetos = [
     descricao: 'Sistema desenvolvido como Trabalho de Conclusão de Curso, com autenticação JWT, dashboard administrativo, cadastro de instituições, API Node.js e banco de dados PostgreSQL.',
     tecnologias: ['React', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'JWT'],
     imagem: '', // Exemplo: '/andrarecursos.png'
-    demo: '', // Link da aplicação publicada (front-end).
-    api: '', // Opcional: link público da documentação Swagger ou endpoint demonstrativo.
-    repositorio: '', // Cole link real, se desejar.
+    demo: 'https://andrarecursosfront-jtb1uhxlg-rafaelas-projects-3a7f8ace.vercel.app/', // Link da aplicação publicada (front-end).
+    api: 'https://api-andra-recursos.vercel.app/', // Opcional: link público da documentação Swagger ou endpoint demonstrativo.
+    repositorio: 'https://github.com/RafaelaSsilva28/Projeto_TCC', // Cole link real, se desejar.
     cor: 'from-[#f3d4dc] via-[#e7bac8] to-[#9b5774]', sigla: 'AR',
   },
   {
@@ -36,11 +36,26 @@ export const projetos = [
     descricao: 'Projeto de estufa com ESP32, sensores de temperatura, umidade, chuva e presença; acionamento de servo, comunicação MQTT, API e painel web para acompanhar os dados.',
     tecnologias: ['ESP32', 'IoT', 'MQTT', 'React', 'Node.js', 'PostgreSQL'],
     imagem: '', // Exemplo: '/estufa.png'
-    demo: '',
-    api: '', // Opcional: link público da documentação da API.
-    repositorio: '',
+    demo: 'https://projeto-estufa-frontend.vercel.app/',
+    api: 'https://projeto-estufa-api.vercel.app/', // Opcional: link público da documentação da API.
+    repositorio: 'https://github.com/RafaelaSsilva28/Projeto-Estufa',
     cor: 'from-[#e9d8cd] via-[#cda39e] to-[#895b68]', sigla: 'IoT',
   },
+  {
+    slug: 'jogo-da-velha',
+    nome: 'Jogo da Velha',
+    tipo: 'Full Stack • Aplicação Web',
+    ano: '2026',
+    destaque: 'Partidas online e locais, sistema de amizades, ranking e personalização de jogadores.',
+    descricao: 'Plataforma de jogo da velha desenvolvida com React e Node.js, com cadastro e autenticação de usuários, partidas locais e online em tempo real, convites para amigos, notificações, ranking, loja de avatares, sistema de moedas e pontuação. Possui diferentes modos de jogo, incluindo Clássico 3x3, Desafio 4x4, Expert 5x5 e Master.',
+    tecnologias: ['React', 'JavaScript', 'Node.js', 'Express', 'PostgreSQL', 'Socket.IO', 'CSS', 'Vercel'],
+    imagem: '', // Exemplo: '/jogo-da-velha.png'
+    demo: 'https://jogo-da-velha-eight-blush.vercel.app/',
+    api: 'https://jogo-da-velha-backend-24lr.onrender.com',
+    repositorio: 'https://github.com/RafaelaSsilva28/jogo-da-velha',
+    cor: 'from-[#e4d9f5] via-[#c4a8e8] to-[#8063b5]',
+    sigla: 'JV',
+},
 ]
 
 export const experiencias = [
@@ -90,5 +105,19 @@ export const competencias = ['Comunicação interpessoal', 'Organização e plan
 // Cole o link de cada certificado no campo `url` do curso correspondente.
 // Enquanto o campo estiver vazio, o botão de certificado não é exibido.
 export const certificados = cursosComplementares.titulos.map((titulo, indice) => ({
-  id: indice + 1, titulo, url: '', cargaHoraria: ''
+  id: indice + 1, titulo, url: 'Certificado_Excel Básic.pdf', cargaHoraria: '',
+  id: indice + 2, titulo, url: 'Certificado_Competência Transversal - Segurança no Trabalh.pdf', cargaHoraria: '',
+  id: indice + 3, titulo, url: 'Certificado_Ética na Inteligência Artificia.pdf', cargaHoraria: '',
+  id: indice + 4, titulo, url: 'Certificado_Por dentro da Segurança Cibernétic.pdf', cargaHoraria: '',
+  id: indice + 5, titulo, url: 'Certificado_FLUÊNCIA - FUNDAMENTOS DA INTELIGÊNCIA ARTIFICIA.pdf', cargaHoraria: '',
+  id: indice + 6, titulo, url: 'Certificado_Desvendando a Descarbonizaçã.pdf', cargaHoraria: '',
+  id: indice + 7, titulo, url: 'Certificado_Desvendando a Indústria 4.pdf', cargaHoraria: '',
+  id: indice + 8, titulo, url: 'Certificado_Empreender SENA.pdf', cargaHoraria: '',
+  id: indice + 9, titulo, url: 'Certificado_Desvendando o ES (1).pdf', cargaHoraria: '',
+  id: indice + 10, titulo, url: 'Certificado_Fundamentos da Gestão de Projetos Aplicados na Indústri.pdf', cargaHoraria: '',
+  id: indice + 11, titulo, url: 'Certificado_Design Thinkin.pdf', cargaHoraria: '',
+  id: indice + 12, titulo, url: 'Certificado_Gestão do Temp.pdf', cargaHoraria: '',
+  id: indice + 13, titulo, url: 'Certificado_GERAÇÃO DE VALOR CIRCULAR E MODELOS DE NEGÓCIO.pdf', cargaHoraria: '',
+  id: indice + 14, titulo, url: 'Certificado_Cidadania Digital e uso Consciente da Interne.pdf', cargaHoraria: '',
+  
 }))
